@@ -1,0 +1,171 @@
+.containerLogin{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 15px;
+}
+
+.wrapLogin{
+    width: 320px;
+    background: #333;
+    padding: 77px 55px 77px 55px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loginForm{
+    width: 100%;
+}
+
+.loginTitle{
+    font-size: 2rem;
+    line-height: 1.2;  
+    display: block; 
+    padding: 30px 0 30px 0;
+}
+.wrapInput{
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin-bottom: 40px;
+}
+
+.input{
+    font-size: 0.9rem;
+    color:var(--white);
+    line-height: 1.2;
+    border: none;
+    display: block;
+
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+.focusInput{
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    pointer-events: none;
+    color: #adadad;
+}
+
+.focusInput::before{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+
+    background: -webkit-linear-gradient(to left, #214a53,#32637a);
+    background: -o-linear-gradient(to left, #214a53,#32637a);
+    background: -moz-linear-gradient(to left, #214a53,#32637a);
+    background: linear-gradient(to left, #214a53,#32637a);
+}
+
+.focusInput::after{
+    color: #9999;
+    line-height: 1.2;
+
+    content: attr(data-placeholder);
+
+    display: block;
+    width: 100%;
+    position: absolute;
+    top: 16px;
+    left: 0px;
+
+    padding-left: 5px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+}
+
+.hasValue{
+    font-size: 0.9rem;
+    color:var(--white);
+    line-height: 1.2;
+    border: none;
+    display: block;
+
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    padding: 0 5px;
+}
+
+.input:focus + .focusInput::after{
+    top: -15px;
+}
+
+.input:focus + .focusInput::before{
+    width: 100%;
+}
+
+.hasValue + .focusInput::after{
+    top: -15px;
+}
+
+.hasValue + .focusInput::before{
+    width: 100%;
+}
+
+.wrapButton{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom:15px;
+}
+
+.loginFormBtn{
+    border: none;
+    border-radius: 4px;
+    color: var(--white);
+    text-transform: uppercase;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to left, #214a53,#32637a);
+   
+}
+
+.loginFormBtn:hover{
+    cursor: pointer;
+    background: linear-gradient(to left, #2e6774,#4386a5);
+}
+
+.wrapLink{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    font-size: 0.8rem;
+    
+    color: #adadad;
+}
+.textLink{
+    text-decoration: none;
+    padding-left: 5px;
+    color:#6a7dfe;
+}
+
+.textLink:hover{
+    text-decoration: underline;
+}
+
